@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basic Selectors</title>
+    <style>
+      /* first way to make a selector*/
+      h2#green-heading {
+        color: green;
+      }
+      /* "#" apply only one id element */
+      /* second way to make a selector */
+      #blue-heading {
+        color: blue;
+      }
+
+      /* "." is for class and apply to all elements */
+      .red-heading {
+        color: red;
+      }
+
+      /* Multiple selectors */
+      #welcome, #about {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 5px;
+      }
+
+      /* Nested selectors */
+      #welcome p {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="welcome">
+      <h2 id="green-heading">Welcome to CSS sandbox!!!</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam fugit libero corporis delectus atque ad commodi magni exercitationem quisquam optio.</p>
+    </div>
+    <div id="about">
+      <h2 id="blue-heading">About</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam harum at quod cupiditate tempora sequi officiis repudiandae autem dignissimos consectetur!</p>
+    </div>
+    <div>
+      <h2 class="red-heading">Contact</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam harum at quod cupiditate tempora sequi officiis repudiandae autem dignissimos consectetur!</p>
+    </div>
+  </body>
+</html>

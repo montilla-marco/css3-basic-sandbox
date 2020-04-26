@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+      width: 450px;
+      height: 450px;
+      position: relative;
+      background: #4f4f4f;
+    }
+    .box {
+      height: 100px;
+      width: 100px;
+    }
+
+    #box-1 {
+      position: relative;
+      top: 50px;
+      left: 50px;
+      background: yellowgreen;
+    }
+    #box-2 {
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      background: yellow;
+    }
+    #box-3 {
+      position: absolute;
+      bottom: 100px;
+      right: 100px;
+      background: blue;
+    }
+    #box-4 {
+      position: fixed;
+      background: red;
+    }
+    #box-5 {
+      position: sticky;
+      background: orange;
+    }
+  </style>
+  <body>
+    <div id="box-1" class="box"></div>
+    <div class="container">
+      <div id="box-2" class="box"></div>
+      <div id="box-3" class="box"></div>
+    </div>
+    <div id="box-4" class="box"></div>
+    <div id="box-5" class="box"></div>
+    <br/>
+    <br/>
+    <br/>
+    <table >
+      <tbody>
+        <tr>
+        <th style="width:14%">Value</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>static</td>
+        <td>Default value. Elements render in order, as they appear in the document flow</td>
+      </tr>
+      <tr>
+        <td>absolute</td>
+        <td>The element is positioned relative to its first positioned (not static) ancestor element</td>             
+      </tr>
+      <tr>
+        <td>fixed</td>
+        <td>The element is positioned relative to the browser window</td>
+      </tr>
+      <tr>
+        <td>relative</td>
+        <td>The element is positioned relative to its normal position, so "left:20px"
+          adds 20 pixels to the element's LEFT position</td>                         
+      </tr>
+      <tr>
+        <td>sticky</td>
+        <td>The element is positioned based on the user's scroll position 
+        <p>A sticky element toggles between <code class="w3-codespan">relative</code> and <code class="w3-codespan">fixed</code>, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).</p>
+        <strong>Note:</strong> Not supported in IE/Edge 15 or earlier. Supported in Safari from version 6.1 with a -webkit- prefix.</td>         
+      </tr>
+      <tr>
+        <td>initial</td>
+        <td>Sets this property to its default value. <a href="css_initial.asp">Read about <em>initial</em></a></td>                 
+        </tr>
+      <tr>
+        <td>inherit</td>
+        <td>Inherits this property from its parent element. <a href="css_inherit.asp">Read about <em>inherit</em></a></td>
+        </tr>
+      </tbody>
+    </table>
+    
+  </body>
+  </html>

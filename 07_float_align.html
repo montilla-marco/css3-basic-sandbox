@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float & Align</title>
+    <style>
+
+      * {
+         box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.2em;
+      }
+
+      #container {
+        width: 55%;
+        /* To center something horizontally in modern browsers, you can use display: flex; 
+        justify-content: center; However, in older browsers like IE8-9 that do not support Flexible Box Layout, 
+        these are not available. In order to center an element inside its parent, use margin: 0 auto; */
+        margin: auto;
+        /* top/bottom */
+        margin: 30px auto;
+        max-width: 930; /* used for responsive design */
+      }
+
+      .box {
+        background: #f4f4f4;
+        border: 1px solid #333333;
+        padding: 10px;
+        margin-bottom: 15px;
+      }
+
+      .box p {
+        text-align: justify;
+      }
+
+      #box-2 {
+        float: left;
+        width: 68%;
+      }
+
+      #box-3 {
+        float: right;
+        width: 30%;
+      }
+
+      .clear {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- html layout sample google search -->
+    <!-- htmltagwrap for vs code  you can wrap html elements using alt + w -->
+    <div id="container">
+      <div id="box-1" class="box">
+        <h3>Box 1</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, velit quisquam quidem delectus dolorem numquam rerum deleniti cumque temporibus adipisci quo et, fugit vitae aspernatur?
+        </p>
+      </div>
+      <div id="box-2" class="box">
+        <h3>Box 2</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, velit quisquam quidem delectus dolorem numquam rerum deleniti cumque temporibus adipisci quo et, fugit vitae aspernatur?
+        </p>
+      </div>
+      <div id="box-3" class="box">
+        <h3>Box 3</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, velit quisquam quidem delectus dolorem numquam rerum deleniti cumque temporibus adipisci quo et, fugit vitae aspernatur?
+        </p>
+      </div>
+      <div class="clear"></div>
+      <div id="box-4" class="box">
+        <h3>Box 4</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, velit quisquam quidem delectus dolorem numquam rerum deleniti cumque temporibus adipisci quo et, fugit vitae aspernatur?
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

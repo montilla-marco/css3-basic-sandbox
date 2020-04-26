@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Backgrounds and Borders</title>
+  <style>
+    #box1 {
+      background-color: blanchedalmond;
+      /* border-width: 3px;
+      border-style: solid;
+      border-color: red; */
+      /* border property is a shorthand property for: border-width border-style (required) border-color */
+      border: 3px solid red;
+      border-radius: 10px; /* rounded corners*/
+    }
+    
+    #box2 {
+      margin-top: 10px;
+      background: #333333;
+      color:gray;
+      border-top: 10px blue solid;
+      border-top-left-radius: 10px;
+    }
+
+    #box3 {
+      /* background-image: url("/images/pexels-photo-814499.jpeg");
+      background-repeat: no-repeat;
+      background-position: X 100px  Y 200px; 
+      background-size: cover; */
+      background: url("/images/pexels-photo-814499.jpeg") repeat center center/cover;
+      background-attachment: fixed; /* fix the image on */
+      color: white;
+      height: 250px;
+    }
+
+    #box4 {
+      background: url("/images/transparent.jpg") no-repeat center center;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+  <div id="box1">
+    <h3>Box one</h3>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, magnam.</p>
+  </div>
+  <div id="box2">
+    <h3>Box two</h3>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, magnam.</p>
+  </div>
+  <div id="box3">
+    <h3>Box three</h3>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, magnam.</p>
+  </div>
+  <div id="box4">
+    <h3>Box four</h3>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, magnam.</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Styling</title>
+    <style>
+      body{
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background: #344a72;
+      }
+
+      main {
+        margin: auto;
+        width: 30%;
+      }
+
+      section {
+        margin: auto;
+        margin-top: 10%;
+        border-radius: 20px;
+      }
+
+      section button {
+        display: block;
+        width: 91%;
+        padding: 10px;
+        margin-top: 2em;
+        margin-left: 1em;
+        margin-bottom: 1em;
+        background: #49c1a2;
+        color: white;
+        height: 3em;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      .form-wrap {
+        background: white;
+      }
+
+      .form-wrap h1 {
+        padding-top: 0.5em;
+        text-align: center;
+        margin-bottom: 0.2em;
+      }
+
+      .form-wrap .bottom-text {
+        text-align: center;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+      }
+      
+      .form-item {
+        width: 95%;
+        margin: auto;
+      }
+
+      .form-item label {
+        color: lightslategray;
+        display: block;
+        margin-bottom: 0.7em;
+        margin-top: 0.7em;
+      }
+
+      .form-item input {
+        height: 3em;
+        width: 95%;
+      }
+
+      footer {
+        text-align: center;
+        color: white;
+        font-size: 0.8em;
+        margin-top: 10px;
+      }
+
+      footer p a {
+        color: #49c1a2;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="form-wrap">
+        <h1>
+          Sign Up
+        </h1>
+        <p>It's free and only takes a minute</p>
+        <form action="">
+          <div class="form-item">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname"/>
+          </div>
+          <div class="form-item">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname"/>
+          </div>
+          <div class="form-item">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email"/>
+          </div>
+          <div class="form-item">
+            <label for="fpassword">Password</label>
+            <input type="fpassword" id="fpassword" name="fpassword"/>
+          </div>
+          <div class="form-item">
+            <label for="spassword">Confirm Password</label>
+            <input type="spassword" id="spassword" name="spassword"/>
+          </div>
+          <button type="submit">Sign Up</button>
+          <p class="bottom-text">
+            By clicking the Sign Up button, you agree to our
+            <a href="">Terms & Conditions</a>
+            <a href="">Privacy Policy</a>
+          </p>
+        </form>
+      </section>
+      <footer>
+        <p>
+          Already have an account? <a href="">Login Here</a>
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>

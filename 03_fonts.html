@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Fonts</title>
+  <style>
+    /* Importing fonts from directory  https://fonts.google.com/ */
+    @font-face {
+      font-family: Monzerrat;
+      src: url("/fonts/Montserrat-Black.ttf") format("truetype"),
+           url("/fonts/Montserrat-BlackItalic.ttf") format("truetype"),
+           url("/fonts/Montserrat-Regular.ttf") format("truetype");
+      font-weight: regular;
+      font-style: normal;
+    }
+  
+    /* px values are used by the browser as is, so 1px will always display as exactly 1px.
+        1 inch = 96 pixel (X)  1 inch = 2.54 cm.  
+        The size of EM or percent-based text depends on its parent. If body text is sized at 12 pixels, 
+        then text set at 120% or 1.2 EM inside the body will be 1.2 * 12, or 14.4 pixels.
+    */
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      line-height: 1.6em; /* line spacing */
+    }
+
+    #welcome p span {
+      font-weight: bold;
+    }
+
+    #about p span {
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div id="welcome">
+      <h2 id="green-heading">Welcome to CSS sandbox!!!</h2>
+      <p>E E E Lorem <span> dolor sit amet consectetur adipisicing elit.</span> Laboriosam fugit libero corporis delectus atque ad commodi magni exercitationem quisquam optio.</p>
+    </div>
+    <div id="about">
+      <h2 id="blue-heading">About</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<span> Veniam harum </span>at quod cupiditate tempora sequi officiis repudiandae autem dignissimos consectetur!</p>
+    </div>
+</body>
+</html>
