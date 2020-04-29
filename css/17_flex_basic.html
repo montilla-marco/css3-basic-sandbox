@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Basics</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .flex-container {
+        background: #4f4f4f;
+        display: flex;
+        /* default property set is row, row-reverse: align from right to left.
+        column: align content like a column, column-reverse: align from bottom to top.
+        wrap: align content as posible by screen size
+        flex-flow: row; */
+      }
+
+      .item {
+        background: #f4f4f4;
+        border: #ccc solid 2px;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+        border-radius: 10px;
+        width: 200px;
+
+        /* flex: is a shorthand in this order: grow shrink basis */
+      }
+
+      .item-1 {
+        /* do not let make a shrink */
+        flex-shrink: 0;
+      }
+
+      .item-2 { 
+        /* makes items can adjust to all remaining screen space */
+        flex-grow: 1;
+      }
+
+      .item-3 { 
+        /* sets the initial main size of a flex item. It sets the size of the content box unless 
+           otherwise set with box-sizing. */
+        flex-basis: 0;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="item item-1">
+        <h3>Item 1</h3>
+      </div>
+      <div class="item item-2">
+        <h3>Item 2</h3>
+      </div>
+      <div class="item item-3">
+        <h3>Item 3</h3>
+      </div>
+    </div>
+  </body>
+</html>

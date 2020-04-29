@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Basics</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .flex-container {
+        background: #4f4f4f;
+        display: flex;
+        flex-direction: row;
+        /* flex-start: The items are packed flush to each other against the edge of the alignment container depending on the flex container's cross-start side.
+        This only applies to flex layout items. For items that are not children of a flex container, this value is treated like start.
+        flex-end: The items are packed flush to each other against the edge of the alignment container depending on the flex container's cross-end side.
+        This only applies to flex layout items. For items that are not children of a flex container, this value is treated like end.
+        center: The items are packed flush to each other in the center of the alignment container along the cross axis. */
+        align-items: center;
+        /* Main axis align  */
+        justify-content: center;
+        height: 30vh;
+      }
+
+      .item {
+        background: #f4f4f4;
+        border: #ccc solid 2px;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+        border-radius: 10px;
+        width: 200px;
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="item item-1">
+        <h3>Item 1</h3>
+      </div>
+      <div class="item item-2">
+        <h3>Item 2</h3>
+      </div>
+      <div class="item item-3">
+        <h3>Item 3</h3>
+      </div>
+    </div>
+  </body>
+</html>
