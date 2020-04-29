@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Targeted Selectors</title>
+    <style>
+      .box-1, .box-2  {
+        background: #f4f4f4;
+        border: black solid 2px;
+        margin-bottom: 10px;
+      }
+
+      /* Direct Children */
+      div > p {
+        background: #ddd;
+      }
+
+      /* Directly after (next:sibling) */
+      div + p {
+        background: #333333;
+        color: #fff;
+      }
+
+      /* By attribute */
+      a[target] {
+        background: yellowgreen;
+        color: white;
+      }
+
+      /* By attribute comparing */
+      a[target='_blank'] {
+        background: yellow;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box-1">
+      <p>Lorem ipsum dolor sit amet.</p>
+      <ul>
+        <li>Item 1</li>
+        <li><p>Item 2</p></li>
+        <li>Item 3</li>
+      </ul>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <a href="">Page 1</a>
+    <a href="" target="">Page 2</a>
+    <a href="" target="_blank">Page 3</a>
+
+  </body>
+</html>
