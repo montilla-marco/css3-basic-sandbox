@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before & After</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #333333;
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100vh;
+      }
+
+      header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: url('/images/photo-1587528373411-3b31a5823e26.jpeg') no-repeat center center/cover;
+        background-size: 1440px 900px;
+        opacity: 0.6;
+        z-index: -1;
+      }
+
+      header > h1 {
+        font-size: 4rm;
+        margin: 1rem;
+      }
+
+      .is-required::after {
+        content: '*';
+        color: red;
+        padding-left: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to my site</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, vel.</p>
+    </header>
+    <!-- <section>
+      <h3>Lorem ipsum dolor sit amet.</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, fugiat
+        quisquam quod asperiores ex ea quae tempora voluptatum, maxime at culpa
+        aspernatur corporis, et quo.</p>
+    </section>
+    <section>
+      <h3>Contact Form</h3>
+      <label for="name" class="is-required">Name</label>
+      <input type="text">
+    </section> -->
+  </body>
+</html>

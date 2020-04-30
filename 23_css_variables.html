@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+      :root {
+        --max-width: 1440px;
+        --primary-color: steelblue;
+        --secondary-color: skyblue;
+        --light-color: #f4f4f4;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--light-color);
+        line-height: 1.4;
+      }
+
+      header {
+        background: var(--primary-color);
+        color: #ffff;
+        height: 70vh;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-bottom: var(--secondary-color) 3px solid;
+      }
+
+      .flex-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-items: center;
+        background: #4f4f4f;
+        height: 30vh;
+      }
+
+      .item {
+        background: #f4f4f4;
+        border: #ccc solid 2px;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+        border-radius: 10px;
+        flex: 1;
+        height: 70%;
+      }
+      
+      .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        max-width: var(--max-width);
+        height: 20vh;
+      }
+
+      .box {
+        background: var(--primary-color);
+        margin: 1rem;
+        padding: 1rem;
+        align-items: center;
+        /* width: 33%; */
+        flex: 1;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>CSS Variables</h1>
+    </header>
+
+    <div class="container">
+      <div class="item box-1">
+        <h3>Lorem ipsum dolor sit amet.</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque,
+          iure! Ullam ipsam eius facilis ab.</p>
+      </div>
+      <div class="item box-3">
+        <h3>Lorem ipsum dolor sit amet.</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque,
+          iure! Ullam ipsam eius facilis ab.</p>
+      </div>
+    </div>
+  </body>
+</html>

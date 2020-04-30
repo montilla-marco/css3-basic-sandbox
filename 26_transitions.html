@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #4f4f4f;
+      color: #f4f4f4;
+      height: 100vh;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background: #f4f4f4;
+      /* specifies a delay (in seconds) for the transition effect. */
+      transition-property: background, border-radius; /* all */
+      /* specifies how many seconds (s) or milliseconds (ms) a transition effect takes to complete */
+      transition-duration: 2s;
+      /* transition effect with the same speed from start to end: */
+      transition-timing-function: ease-in-out;
+      /* specifies a delay (in seconds) for the transition effect. */
+      /* transition-duration: 10s; */
+
+      /* shorthand to transition */
+      /* transition: properties (comma separated) | duration | timing-funtion | delay */
+    }
+
+    .box:hover {
+      background: yellowgreen;
+      border-radius: 50%;
+    }
+  </style>
+  </head>
+  <body>
+    <div class="box">
+
+    </div>
+  </body>
+</html>

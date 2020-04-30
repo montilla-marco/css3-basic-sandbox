@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframes</title>
+    <style>
+      body {
+        background: #4f4f4f;
+      }
+
+      .box {
+        background: #fff;
+        width: 200px;
+        height: 200px;
+        
+        animation-name: animate1;
+        /* Specify that the animation should complete one cycle in 2 seconds: */
+        animation-duration: 2s;
+        /* Play the animation two times: */
+        animation-iteration-count: 2;
+        /* specifies a style for the element when the animation is not playing (before it starts, after it ends, or both).
+        CSS animations do not affect the element before the first keyframe is played or after the last keyframe is played */
+        animation-fill-mode: forwards;
+        /* Start the animation after 1 second */
+        animation-delay: 1s;
+        /* Play the animation forwards first, then backwards */
+        animation-direction: alternate-reverse;
+        /* Animation Shorthand */
+        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+      }
+
+      @keyframes animate1 {
+        /* from {
+          width: 200px;
+        } */
+        to {
+          width: 600px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+
+    </div>
+  </body>
+</html>
