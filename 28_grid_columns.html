@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Columns</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: #b8b7b7;
+      }
+      .grid {
+        background:#9f9f9f;
+        display: grid;
+        /* grid-template-columns: 33% 33% 33%; */
+        /* Automatic fill of the remaining space */
+        /* grid-template-columns: 20% auto 20%; 
+        grid-template-columns: auto auto auto;
+        grid-template-columns: repeat(3, auto); */
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-gap: 0.2rem;
+      }
+
+      .item {
+        background-color: rgb(228, 181, 95);
+        border: yellow 1px solid;
+        color: white;
+        /* padding size can affect the grid behavior between next item in responsive */
+        padding: 2rem;
+      }
+
+      main {
+        background: rgb(91, 144, 91);
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 1rem;
+      }
+
+      main section {
+        background-color: greenyellow;
+      }
+      main aside {
+        background: yellowgreen;
+      }
+      /* @media screen and (max-width: 340px) {
+        .grid { grid-template-columns: 33% 33% 33%; }
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+    </div>
+
+    <main>
+      <section>
+        <h3>About me</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ipsa
+          earum temporibus! Quasi sint ut a modi labore at ratione!
+        </p>
+      </section>
+      <aside>
+        <h3>
+          Lorem ipsum dolor sit amet.
+        </h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque,
+          sequi.
+        </p>
+      </aside>
+    </main>
+  </body>
+</html>
