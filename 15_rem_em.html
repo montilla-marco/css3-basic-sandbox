@@ -6,7 +6,7 @@
     <title>Rem & Em</title>
     <style>
       html {
-        font-size: 60%;
+        font-size: 90%;
       }
       /* #box1 {
         font-size: 20px;
@@ -29,10 +29,28 @@
       #box2 p { 
         font-size: 2rem;
         line-height: 1.7rem;
-      } 
+      }
+
+      #box-3 > p:first-child {
+        font-size: 2em;
+      }
+
+      #box-3 > p.px {
+          font-size: 20px;
+      }
+
+      #box-3 > p.ex {
+          font-size: 1ex;
+      }
+
     </style>
   </head>
   <body>
+    <div>
+      <img height="200" src="./images/unidades_medida_relativa.gif" alt="">
+    </div>
+    <p>Body Text   M y x</p>
+
     <!-- <div id="box1">
       <h3>Box 1</h3>
       <p>
@@ -55,5 +73,14 @@
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum temporibus unde deserunt natus dolorum adipisci in deleniti obcaecati perferendis rem.
       </p>
     </div>
+
+    <div id="box-3">
+      <p>2 times the ancestor element</p>
+      <p class="em">Paragraph EM</p>
+      <p class="ex">Paragraph EX</p>
+      <p class="px">Paragraph PX</p>
+    </div>
+
+
   </body>
 </html>
