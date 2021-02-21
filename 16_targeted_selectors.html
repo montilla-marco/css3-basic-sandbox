@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Targeted Selectors</title>
     <style>
-      .box-1, .box-2  {
+      .box-1, .box-2, .box-3  {
         background: #f4f4f4;
         border: black solid 2px;
         margin-bottom: 10px;
@@ -16,8 +16,18 @@
         background: #ddd;
       }
 
+      .box-2 > p {
+        color: lightcoral;
+      }
+
       /* Directly after (next:sibling) */
       div + p {
+        background: #333333;
+        color: #fff;
+      }
+
+      /* Directly all sibling */
+      section ~ p {
         background: #333333;
         color: #fff;
       }
@@ -33,6 +43,7 @@
         background: yellow;
         color: white;
       }
+
     </style>
   </head>
   <body>
@@ -47,9 +58,49 @@
     </div>
     <p>Lorem ipsum dolor sit amet.</p>
     <p>Lorem ipsum dolor sit amet.</p>
+
     <a href="">Page 1</a>
     <a href="" target="">Page 2</a>
     <a href="" target="_blank">Page 3</a>
+    <br>
 
+    <div class="box-2">
+      <p>
+        Paragraph 1
+        <div>
+          <p>
+            Paragraph 1.1
+            <div>
+              <p>Paragraph 1.1.1</p>
+            </div>
+          </p>
+        </div>
+      </p>
+
+      <p>
+        Paragraph 2
+        <p>
+          <p>
+            Paragraph 2.1
+            <p>
+              Paragraph 2.1.1
+            </p>
+          </p>
+        </p>
+      </p>
+
+      <div>
+        <p>Paragraph 3</p>
+      </div>
+    </div>
+
+    <div class="box-3">
+      <p>Lorem ipsum dolor sit amet.</p>
+      <section>
+        Sibling sample
+      </section>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
   </body>
 </html>

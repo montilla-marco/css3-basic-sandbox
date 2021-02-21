@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Basic Selectors</title>
     <style>
-      /* first way to make a selector*/
+      /* first way to make a selector (is not necessary to put h2 element) [h2] */
       h2#green-heading {
         color: green;
       }
@@ -20,6 +20,9 @@
         color: red;
       }
 
+      .double-style {
+        font-size: 10px;
+      }
       /* 
         aplies to all h3 with class nest 
         class style are over element style
@@ -50,7 +53,7 @@
 
     <div id="welcome">
       <h2 id="green-heading">Welcome to CSS sandbox!!!</h2>
-      <h3 class="nest">
+      <h3 class="nest double-style">
         Lorem ipsum dolor sit amet.
         <h3>class style are over element style</h3>
       </h3>
